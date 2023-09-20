@@ -10,6 +10,7 @@ import med.voll.api.endereco.DadosEndereco;
 public record DadosCadastroPaciente (
     @NotBlank
     String nome,
+
     @NotBlank
     @Pattern(regexp = "\\d{3}\\.?\\d{3}\\.?\\d{3}\\-?\\d{2}")
     String cpf,
