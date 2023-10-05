@@ -29,6 +29,7 @@ public class SecurityConfigurations {
                 .antMatchers(HttpMethod.POST, "/login").permitAll()
                 .antMatchers(HttpMethod.DELETE, "/medicos").hasRole("ADMIN")
                 .antMatchers(HttpMethod.DELETE, "/pacientes").hasRole("ADMIN")
+                .antMatchers("/v3/api-docs/**", "/swagger-ui.html", "/swagger-ui/**").permitAll()
                 .anyRequest().authenticated()
                 .and().addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class)
                 .build();
