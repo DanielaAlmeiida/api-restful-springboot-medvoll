@@ -23,4 +23,5 @@ public record DadosDetalhamentoMedico(
                 medico.getTelefone()
         );
     }
+
 }
